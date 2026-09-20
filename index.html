@@ -1,0 +1,766 @@
+
+<html>
+
+<head>
+
+    <title>Uthra P Sanjay - Portfolio</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #101414;
+            color: white;
+            animation: pageLoad 1.5s;
+        }
+
+        /* Moving Circles */
+
+        .circle {
+            position: fixed;
+            border-radius: 50%;
+            background-color: #39b54a;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .circle.one {
+            width: 100px;
+            height: 100px;
+            top: 120px;
+            left: 10%;
+            animation: moveCircle 6s infinite alternate;
+        }
+
+        .circle.two {
+            width: 70px;
+            height: 70px;
+            top: 400px;
+            right: 10%;
+            animation: moveCircle 5s infinite alternate-reverse;
+        }
+
+        @keyframes moveCircle {
+
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(80px, 50px);
+            }
+
+        }
+
+        /* Header */
+
+        header {
+            background-color: #151b1b;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: #39b54a;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        nav a:hover {
+            color: #39b54a;
+        }
+
+
+        /* Home */
+
+        .home {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #172020;
+        }
+
+        .home h1 {
+            color: #39b54a;
+            font-size: 40px;
+            animation: appear 2s;
+        }
+
+        .home h2 {
+            color: #dddddd;
+        }
+
+        .home p {
+            color: #cccccc;
+        }
+
+
+        /* Button */
+
+        .button {
+            display: inline-block;
+            background-color: #39b54a;
+            color: black;
+            padding: 10px 20px;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #75d67e;
+        }
+
+
+        /* Sections */
+
+        section {
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #39b54a;
+        }
+
+
+        /* About */
+
+        .about {
+            background-color: #101414;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: 15px auto;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+
+        /* Education */
+
+        .education {
+            background-color: #151b1b;
+        }
+
+        .education-box {
+            background-color: #202828;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-left: 4px solid #39b54a;
+            border-radius: 5px;
+        }
+
+        .education-box h3 {
+            color: #39b54a;
+        }
+
+        .education-box p {
+            color: #cccccc;
+        }
+
+
+        /* Skills */
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background-color: #202828;
+            padding: 15px;
+            width: 80px;
+            border-radius: 5px;
+        }
+
+        .skill:hover {
+            background-color: #263b2a;
+            transform: translateY(-5px);
+        }
+
+        .working-style {
+            max-width: 600px;
+            margin: 35px auto 0;
+            text-align: left;
+        }
+
+        .working-style p {
+            color: #39b54a;
+            font-size: 18px;
+        }
+
+        .working-style h3 {
+            color: #dddddd;
+            font-size: 18px;
+            font-weight: normal;
+            margin: 18px 0;
+        }
+
+        .working-style h3::first-letter {
+            color: #39b54a;
+        }
+
+
+        /* Achievements */
+
+        .achievements {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .achievement {
+            background-color: #202828;
+            width: 280px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .achievement h3 {
+            color: #39b54a;
+        }
+
+        .achievement p {
+            color: #cccccc;
+            line-height: 1.5;
+        }
+
+
+        /* Projects */
+
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            background-color: #202828;
+            width: 280px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .project h3 {
+            color: #39b54a;
+        }
+
+        .project p {
+            color: #cccccc;
+            line-height: 1.5;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+
+        /* More About Me */
+
+        .dance {
+            background-color: #101414;
+        }
+
+        .dance-box {
+            max-width: 750px;
+            margin: auto;
+            padding: 25px;
+            background-color: #202828;
+            border-left: 4px solid #39b54a;
+            border-radius: 5px;
+        }
+
+        .dance-box p {
+            color: #cccccc;
+            line-height: 1.7;
+        }
+
+
+        /* Contact */
+
+        .contact {
+            background-color: #172020;
+        }
+
+        .contact p {
+            color: #cccccc;
+        }
+
+        .contact a {
+            color: #39b54a;
+        }
+
+
+        /* Footer */
+
+        footer {
+            background-color: #151b1b;
+            text-align: center;
+            padding: 20px;
+            color: #aaaaaa;
+        }
+
+
+        /* Simple Animation */
+
+        @keyframes pageLoad {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+
+        }
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .home h1 {
+                font-size: 30px;
+            }
+
+            .project {
+                width: 80%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="circle one"></div>
+    <div class="circle two"></div>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>Uthra P Sanjay</h1>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#education">Education</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#achievements">Achievements</a>
+
+            <a href="#dance">More About Me</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Home -->
+
+    <section class="home" id="home">
+
+        <h1>Hello, I'm Uthra</h1>
+
+        <h2>IMCA Student & Aspiring Software Developer</h2>
+
+        <p>Welcome to my personal portfolio.</p>
+
+        <p>
+            I am interested in programming,
+            web development and application designing.
+        </p>
+
+        <a href="#projects" class="button">
+            View My Projects
+        </a>
+
+    </section>
+
+
+    <!-- About Me -->
+
+    <section class="about" id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am <b>Uthra P Sanjay</b>,
+            currently studying <b>3rd year IMCA</b>
+            at <b>SCMS School of Technology and Management,
+            Muttom, Aluva</b>.
+        </p>
+
+        <p>
+            I am from <b>Ernakulam, Kerala</b>
+            and my expected year of graduation is
+            <b>2029</b>.
+        </p>
+
+        <p>
+            I am interested in software development,
+            web development and application designing.
+            I enjoy learning new technologies and
+            creating simple and useful applications.
+        </p>
+
+        <p>
+            My career goal is to become a skilled
+            software developer and create useful,
+            user-friendly applications.
+        </p>
+
+    </section>
+
+
+    <!-- Education -->
+
+    <section class="education" id="education">
+
+        <h2>My Education</h2>
+
+        <div class="education-box">
+
+            <h3>
+                IMCA - Integrated Master of Computer Applications
+            </h3>
+
+            <p>
+                <b>
+                    SCMS School of Technology and Management
+                </b>
+            </p>
+
+            <p>Muttom, Aluva</p>
+
+            <p>Currently studying 3rd Year</p>
+
+            <p>Expected Graduation: 2029</p>
+
+        </div>
+
+
+        <div class="education-box">
+
+            <h3>Higher Secondary Education</h3>
+
+            <p>
+                <b>SBOA Public (Sr. Sec) School</b>
+            </p>
+
+            <p>Ernakulam</p>
+
+            <p>2022 - 2024</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                <h3>C</h3>
+            </div>
+
+            <div class="skill">
+                <h3>C++</h3>
+            </div>
+
+            <div class="skill">
+                <h3>Java</h3>
+            </div>
+
+            <div class="skill">
+                <h3>C#</h3>
+            </div>
+
+            <div class="skill">
+                <h3>HTML</h3>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+            </div>
+
+        </div>
+
+
+        <!-- Working Style -->
+
+        <div class="working-style">
+
+            <p>My Working Style</p>
+
+            <h3>– &nbsp; Creative thinking</h3>
+
+            <h3>– &nbsp; Quick learner</h3>
+
+            <h3>– &nbsp; Problem solving</h3>
+
+            <h3>– &nbsp; Attention to detail</h3>
+
+            <h3>– &nbsp; Team collaboration</h3>
+
+            <h3>– &nbsp; Discipline and consistency</h3>
+
+            <h3>– &nbsp; Continuous learning</h3>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+
+            <!-- Project 1 -->
+
+            <div class="project">
+
+                <h3>Waste Management App</h3>
+
+                <p>
+                    A mobile application interface
+                    designed for waste management
+                    and community use.
+                </p>
+
+                <p>
+                    The interface was designed using Figma.
+                </p>
+
+                <a
+                    href="https://www.figma.com/proto/CN8yenWQ0eOLZLYRJSmZkg/Waste-Management-Mobile-Application--Community-?node-id=19-9&t=I8c4tiS65QnD8y0p-1&starting-point-node-id=1%3A2"
+                    target="_blank"
+                    class="button">
+
+                    View Figma Design
+
+                </a>
+
+            </div>
+
+
+            <!-- Project 2 -->
+
+            <div class="project">
+
+                <h3>Web Technology Mini Projects</h3>
+
+                <p>
+                    A collection of mini projects
+                    created while learning web technologies.
+                </p>
+
+                <p>
+                    These projects are available
+                    on my GitHub repository.
+                </p>
+
+                <a
+                    href="https://github.com/imca-582-Uthra/WEB-TECH"
+                    target="_blank"
+                    class="button">
+
+                    View GitHub
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Achievements -->
+
+    <section id="achievements">
+
+        <h2>My Achievements</h2>
+
+        <div class="achievements">
+
+            <div class="achievement">
+
+                <h3>Academic Proficiency</h3>
+
+                <p>
+                    Academic Proficiency Award
+                    for the academic year 2022 - 23.
+                </p>
+
+            </div>
+
+            <div class="achievement">
+
+                <h3>Highest in Accountancy</h3>
+
+                <p>
+                    Achieved the highest marks in
+                    Accountancy in the Board Examination 2024.
+                </p>
+
+            </div>
+
+            <div class="achievement">
+
+                <h3>School Second</h3>
+
+                <p>
+                    Secured second position in school
+                    in March 2024.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- More About Me -->
+
+    <section class="dance" id="dance">
+
+        <h2>More About Me</h2>
+
+        <div class="dance-box">
+
+            <p>
+                Apart from my studies in technology,
+                <b>Bharatanatyam is an important part of my life</b>.
+                I am a Bharatanatyam dancer who also enjoys
+                teaching dance. I follow the <b>Thanjavur Bhani</b>
+                style of Bharatanatyam and I am currently pursuing
+                my dance studies at <b>Bharatha Bharathi Institution</b>.
+                Bharatanatyam has helped me develop discipline,
+                patience, creativity, confidence, and a deeper
+                appreciation for Indian classical art. Teaching dance
+                also gives me an opportunity to share my knowledge
+                and passion for this beautiful art form with others.
+            </p>
+
+            <p>
+                Instagram:
+                <a href="https://www.instagram.com/_u_th_ra_?stkn=c3FqdzFxNG12YmE="
+                   target="_blank">
+                    Visit My Instagram
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section class="contact" id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>
+            Email:
+            <b>uthrapsanjay@gmail.com</b>
+        </p>
+
+        <p>
+            GitHub:
+
+            <a
+                href="https://github.com/imca-582-Uthra"
+                target="_blank">
+
+                Visit My GitHub
+
+            </a>
+
+        </p>
+
+        <a
+            href="mailto:uthrapsanjay@gmail.com"
+            class="button">
+
+            Send Email
+
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Uthra P Sanjay | My Portfolio
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
